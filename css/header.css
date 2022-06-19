@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Indie Flower', cursive;
+    background: linear-gradient(50deg, rgb(0, 27, 52), rgb(0, 13, 26));
+    background-repeat: no-repeat;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.header h1 {
+    color: white;
+}
+
+.tabla {
+    width: 100%;
+    height: 500px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    width: 1000px;
+    height: 450px;
+    border-radius: 20px;
+    background-color: rgba(0, 27, 52,0.5);
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(4,1fr);
+    padding: 10px 10px 10px 10px;
+}
+
+.cuadro {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgb(0, 51, 99);
+    transition: 0.2s;
+}
+
+.cuadro:hover {
+    transition: 0.2s;
+    border: 4px solid white;
+    transform: translateX(-2px);
+    transform: translateY(-2px);
+}
+
+.cuadro p {
+    width: 100%;
+    text-align: center;
+}
+
+.H {
+    grid-area: 1/1;
+}
+.Li {
+    grid-area: 2/1;
+}
+.Be {
+    grid-area: 2/2;
+}
+.Na {
+    grid-area: 3/1;
+}
+.Mg {
+    grid-area: 3/2;
+}
+.K {
+    grid-area: 4/1;
+}
+.Ca {
+    grid-area: 4/2;
+}
+.Sc {
+    grid-area: 4/3;
+}
+.Ti {
+    grid-area: 4/4;
+}
+.V {
+    grid-area: 4/5;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+}
+
+@media (max-width:1000px) {
+    .grid {
+        width: 600px;
+    }
+}
+
+@media (max-width:600px) {
+    .grid {
+        width: 300px;
+    }
+    .cuadro {
+        width: 50px;
+        height: 50px;
+    }
+    .cuadro p {
+        font-size: 10px;
+    }
+}
